@@ -1,19 +1,18 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Cart from "./components/cart/Cart";
-import Header from "./components/header/Header";
-import Home from "./components/home/Home";
+import React from "react";
+import { NavBar } from "./components/NavBar/NavBar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter } from "react-router-dom";
+import { AppRouter } from "./router/AppRouter";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <div>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <NavBar />
+        <AppRouter />
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 
