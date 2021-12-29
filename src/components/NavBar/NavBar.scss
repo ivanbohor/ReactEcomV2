@@ -1,15 +1,16 @@
 .header {
     width: 100%;
     background-color: goldenrod;
-    color: white;
-    display: flex;
+    display: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    
 
     h1 {
         font-size: 42px;
         font-weight: 700;
+        
     }
 
     nav {
@@ -28,3 +29,4 @@
         }
     }
 }
+

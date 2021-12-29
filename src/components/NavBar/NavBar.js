@@ -4,25 +4,23 @@ import "./NavBar.scss";
 
 export const NavBar = () => {
   return (
-    <header className="header">
+    <header className="header ">
       <Link to="/">
-        <h1>Tienda React</h1>
+        <h1 className="text-center">Bar Ecommerce</h1>
       </Link>
-
       <nav>
         <ul>
           <li>
-            <Link to="productos/zapatillas">Zapatillas</Link>
+            <Link to="productos/menu">Menu</Link>
           </li>
           <li>
-            <Link to="productos/remeras">Remeras</Link>
+            <Link to="productos/pizza">Pizzas</Link>
           </li>
           <li>
-            <Link to="productos/buzos">Buzos</Link>
+            <Link to="productos/contacto">Contacto</Link>
           </li>
         </ul>
       </nav>
-
       <CartWidget />
     </header>
   );
